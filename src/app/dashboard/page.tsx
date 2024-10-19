@@ -3,12 +3,12 @@
 const page = () => {
  
   return (
-    <div className="w-full h-[80%] bg-gray-100">
-
-     page dashboard
-
-     
-    </div>
+    <>
+    <section className="w-full h-[15%] bg-blue-100"></section>
+    <section className="w-full h-[85%]">
+      
+    </section>
+    </>
   );
 };
 

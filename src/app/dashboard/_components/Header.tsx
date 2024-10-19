@@ -13,8 +13,8 @@ const Header: React.FC<HeaderProps> = ({ isOpen, setIsOpen }) => {
   };
 
   return (
-    <header className="flex items-center justify-between p-4 bg-blue-950 shadow-md">
-      <h1 className="w-full h-[auto] flex items-center xl:justify-end px-3 text-2xl font-bold text-sky-400 lg:justify-start md:justify-start">
+    <header className="flex items-center justify-between p-4 bg-indigo-900 shadow-md">
+      <h1 className="w-full h-[auto] flex items-center xl:justify-end px-3 text-3xl font-bold text-sky-400 lg:justify-start md:justify-start">
         <span className="text-orange-400"> IS</span>RO
       </h1>
       <div>
