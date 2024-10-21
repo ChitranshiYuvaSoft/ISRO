@@ -42,7 +42,7 @@ const Layout: React.FC<DashboardProps> = ({ children }) => {
 
         {/* Main Page */}
         <main className="w-full h-[89vh] bg-slate-100 relative overflow-y-auto">
-          <section className="w-[100%] h-[15%] bg-blue-100">
+          <section className="w-[100%] h-[10.8%]">
             <BreadCrumbs
               homeElement={"Home"}
               separator={<span> | </span>}
@@ -52,10 +52,7 @@ const Layout: React.FC<DashboardProps> = ({ children }) => {
               capitalizeLinks
             />
           </section>
-          <section className="w-[100%] h-[85%]">
-            {" "}
-            {children}
-          </section>
+          <section className="w-[100%] h-[89.2%] bg-white"> {children}</section>
         </main>
       </div>
     </section>

@@ -27,7 +27,7 @@ const BreadCrumbs = ({
   const pathNames = paths.split("/").filter((path) => path);
 
   return (
-    <div className="w-full h-[100%] bg-white flex items-center justify-end">
+    <div className="w-full h-[100%]  flex items-center justify-end">
       <ul className={containerClasses}>
         <li className={listClasses}>
           <Link href={"/"}>{homeElement}</Link>

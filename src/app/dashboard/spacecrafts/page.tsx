@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { getspacecraftsData } from "@/context/IsroAction";
 import { useIsroContext } from "@/context/IsroContext";
 import React, { useEffect } from "react";
@@ -18,11 +18,11 @@ const page = () => {
     getSpacecraftsInfo();
   }, []);
 
-  console.log(spaceCraftsData)
+  console.log(spaceCraftsData);
 
   return (
     <>
-      <section className="w-[100%] h-[100%]">
+      <section className="w-[100%] h-[100%] mt-5">
         <div className="relative overflow-x-auto">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -33,7 +33,6 @@ const page = () => {
                 <th scope="col" className="px-6 py-3">
                   Name
                 </th>
-               
               </tr>
             </thead>
             <tbody>
@@ -49,7 +48,6 @@ const page = () => {
                     {data.id}
                   </th>
                   <td className="px-6 py-4">{data.name}</td>
-                
                 </tr>
               ))}
             </tbody>
