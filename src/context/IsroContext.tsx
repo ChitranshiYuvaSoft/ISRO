@@ -1,8 +1,15 @@
 "use client";
 
 import { createContext, useReducer, ReactNode, useContext } from "react";
-import { CentresData, IsroContextType, LaunchersData, SatellitesData, SpaceCraftsData } from "./types";
+import {
+  CentresData,
+  IsroContextType,
+  LaunchersData,
+  SatellitesData,
+  SpaceCraftsData,
+} from "./types";
 import IsroReducer from "./IsroReducer";
+import { getspacecraftsData } from "./IsroAction";
 
 interface InitialState {
   centresData: CentresData[];
@@ -31,6 +38,7 @@ const IsroContext = createContext<IsroContextType | undefined>(undefined);
 export const IsroProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(IsroReducer, initialState);
 
+
   return (
     <IsroContext.Provider value={{ ...state, dispatch }}>
       {children}
@@ -38,7 +46,8 @@ export const IsroProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Optional: Export a custom hook for easier context consumption
+
+// Custom Hook
 export const useIsroContext = () => {
   const context = useContext(IsroContext);
   if (!context) {

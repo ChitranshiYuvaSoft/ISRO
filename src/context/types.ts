@@ -20,7 +20,7 @@ export interface CentresData {
 }
 
 export interface LaunchersData {
-  id: number;
+  id: string;
 }
 
 export interface SatellitesData {

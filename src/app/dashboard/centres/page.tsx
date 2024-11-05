@@ -3,7 +3,7 @@ import { getCentresData } from "@/context/IsroAction";
 import { useIsroContext } from "@/context/IsroContext";
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import SearchData from "../_components/SearchData";
+import { CentresData } from "@/context/types";
 
 const page = () => {
   const { dispatch, centresData } = useIsroContext();
@@ -29,7 +29,7 @@ const page = () => {
       setAllCentresData(centresData);
       return;
     } else {
-      const filterBySearch = centresData.filter((item) => {
+      const filterBySearch = centresData.filter((item : CentresData) => {
         if (item.name.toLowerCase().includes(search.toLowerCase())) {
           return item;
         }

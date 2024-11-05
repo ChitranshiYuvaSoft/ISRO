@@ -1,8 +1,8 @@
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export const getCentresData = async () => {
   const response = await axios.get("https://isro.vercel.app/api/centres");
-  // console.log(response.data.centres);
   return response.data.centres;
 };
 
@@ -19,9 +19,7 @@ export const getsatellitesData = async () => {
 };
 
 export const getspacecraftsData = async () => {
-  const response = await axios.get(
-    "https://isro.vercel.app/api/spacecrafts"
-  );
-  console.log(response)
+  const response = await axios.get("https://isro.vercel.app/api/spacecrafts");
+  console.log(response);
   return response.data.spacecrafts;
 };

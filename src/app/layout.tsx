@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { IsroProvider } from "@/context/IsroContext";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,6 +31,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <IsroProvider>{children}</IsroProvider>
+        <div>
+          <Toaster
+           position="top-right"
+           reverseOrder={false} />
+        </div>
       </body>
     </html>
   );

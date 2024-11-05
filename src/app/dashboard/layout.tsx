@@ -46,8 +46,8 @@ const Layout: React.FC<DashboardProps> = ({ children }) => {
             <BreadCrumbs
               homeElement={"Home"}
               separator={<span> | </span>}
-              activeClasses="text-amber-600"
-              containerClasses="flex text-sky-400 text-sm"
+              activeClasses="text-black"
+              containerClasses="flex text-blue-300 text-sm"
               listClasses="hover:underline mx-2 font-bold"
               capitalizeLinks
             />
